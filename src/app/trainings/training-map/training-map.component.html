@@ -1,1 +1,9 @@
-<h1>training-map works!</p>
+<h1>training-map works!</h1>
+<google-map [options]="mapOptions">
+  <map-marker *ngFor="let point of points" 
+    [position]="{ lat: point.lat, lng: point.lng }"
+    [options]="markerOptions">
+  </map-marker>
+  <map-polyline [options]="polylineOptions"></map-polyline>
+  <map-polyline [options]="polylineOptionsBlue"></map-polyline>
+</google-map>

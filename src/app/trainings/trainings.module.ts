@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TrainingsListComponent } from './trainings-list/trainings-list.component';
 import { TrainingMapComponent } from './training-map/training-map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { TrainingMapComponent } from './training-map/training-map.component';
     TrainingsListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    GoogleMapsModule
   ]
 })
 export class TrainingsModule { }
