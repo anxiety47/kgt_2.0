@@ -32,11 +32,10 @@ export class TrainingMapComponent implements OnInit {
   
   }
 
-
-  myLatLng = { lat: 50.01146223876953, lng: 19.82978582382202 };
+  myLatLng = { lat: 50.109205171465874, lng: 19.779058629646897 };
   mapOptions: google.maps.MapOptions = {
     center: this.myLatLng,
-    zoom: 20,
+    zoom: 30,
   };
 
   iconSize = 6;
