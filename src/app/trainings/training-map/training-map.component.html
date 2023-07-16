@@ -1,9 +1,25 @@
 <h1>training-map works!</h1>
-<google-map [options]="mapOptions">
-  <map-marker *ngFor="let point of points" 
+<google-map [options]="mapOptions" width="100%">
+  <map-marker 
+    *ngFor="let point of dogTrail" 
+    #marker="mapMarker"
     [position]="{ lat: point.lat, lng: point.lng }"
-    [options]="markerOptions">
+    [options]="markerOptions"
+    (mapClick)="displayInfoWindow(marker, infoWindow)">
+    <map-info-window #infoWindow="mapInfoWindow">
+      <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }} //</p>
+      <p>lat {{ point.lat }} //</p>
+      <p>lng {{ point.lng }} //</p>
+      <button click="markStart()">Start</button>
+      <button click="markEnd()">End</button>
+    </map-info-window>
   </map-marker>
-  <map-polyline [options]="polylineOptions"></map-polyline>
-  <map-polyline [options]="polylineOptionsBlue"></map-polyline>
+
+  <map-marker *ngFor="let point of personTrail" 
+  [position]="{ lat: point.lat, lng: point.lng }"
+  [options]="markerOptions">
+</map-marker>
+
+  <map-polyline [options]="dogTrailOptions"></map-polyline>
+  <map-polyline [options]="personTrailOptions"></map-polyline>
 </google-map>

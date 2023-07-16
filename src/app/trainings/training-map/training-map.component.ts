@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { points, pointsBlue } from './points';
+import { TrackPoint } from '../models/trainings';
+import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 @Component({
   selector: 'app-training-map',
@@ -7,6 +9,9 @@ import { points, pointsBlue } from './points';
   styleUrls: ['./training-map.component.scss']
 })
 export class TrainingMapComponent {
+
+  @Input() dogTrail: TrackPoint[] = points;
+  @Input() personTrail: TrackPoint[] = pointsBlue;
 
   points = points;
   myLatLng = { lat: 50.01146223876953, lng: 19.82978582382202 };
@@ -24,17 +29,26 @@ export class TrainingMapComponent {
 
   markerOptions: google.maps.MarkerOptions = {icon: this.icon};
 
-  polylineOptions = {
-    path: points,
+  dogTrailOptions = {
+    path: this.dogTrail,
     strokeColor: '#ff0000',
     strokeOpacity: 1.0,
     strokeWeight: 2,
     };
 
-  polylineOptionsBlue = {
-    path: pointsBlue,
+  personTrailOptions = {
+    path: this.personTrail,
     strokeColor: '#0000ff',
     strokeOpacity: 1.0,
     strokeWeight: 4,
   };
+
+
+  displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow) {
+    console.log("marker click");
+    infoWindow.open(marker);
+  }
+
+  markStart() {}
+  markEnd() {}
 }

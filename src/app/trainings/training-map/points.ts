@@ -1,5 +1,7 @@
+import { TrackPoint } from "../models/trainings";
+
 // tmp file
-export const points = [
+export const points: TrackPoint[] = [
   {
     "lat": 50.01146223876953,
     "lng": 19.82978582382202,
@@ -8,7 +10,7 @@ export const points = [
   {
     "lat": 50.01148223876953,
     "lng": 19.82978582382202,
-    "time": new Date(2022, 11, 20, 11, 21)
+    "time": new Date(2022, 11, 22, 11, 21)
   },
   {
     "lat": 50.01150369644165,
@@ -62,7 +64,7 @@ export const points = [
   }
 ];
 
-export const pointsBlue = [
+export const pointsBlue: TrackPoint[]  = [
   {
     "lat": 50.01142223876943,
     "lng": 19.82978582382202,
