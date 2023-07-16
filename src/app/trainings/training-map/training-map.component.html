@@ -1,7 +1,7 @@
 <h1>training-map works!</h1>
 <google-map [options]="mapOptions" width="100%">
   <map-marker 
-    *ngFor="let point of dogTrail" 
+    *ngFor="let point of dogTrail; let i = index" 
     #marker="mapMarker"
     [position]="{ lat: point.lat, lng: point.lng }"
     [options]="markerOptions"
@@ -10,8 +10,8 @@
       <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }} //</p>
       <p>lat {{ point.lat }} //</p>
       <p>lng {{ point.lng }} //</p>
-      <button click="markStart()">Start</button>
-      <button click="markEnd()">End</button>
+      <button (click)="markStart(i)">Start</button>
+      <button (click)="markEnd(i)">End</button>
     </map-info-window>
   </map-marker>
 

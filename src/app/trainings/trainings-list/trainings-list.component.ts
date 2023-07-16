@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trainings-list',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingsListComponent implements OnInit {
 
-  public ngOnInit(): void {
-    
+  constructor(private router: Router) {}
+
+  public ngOnInit(): void {}
+
+  public goToTraining(): void {
+    this.router.navigate(['training']);
   }
 }

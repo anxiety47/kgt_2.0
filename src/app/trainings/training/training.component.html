@@ -1,0 +1,11 @@
+<app-training-map
+  [dogTrail]="points"
+  [personTrail]="pointsBlue">
+</app-training-map>
+
+<h2>Current dog trail:</h2>
+<ng-container *ngFor="let point of points; let i = index">
+  <p style="margin-left: 1rem">
+    {{i}}. {{point | json}}
+  </p>
+</ng-container>

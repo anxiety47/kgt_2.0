@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { points, pointsBlue } from './points';
+import { Component, Input, OnInit } from '@angular/core';
 import { TrackPoint } from '../models/trainings';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
@@ -8,12 +7,32 @@ import { MapInfoWindow, MapMarker } from '@angular/google-maps';
   templateUrl: './training-map.component.html',
   styleUrls: ['./training-map.component.scss']
 })
-export class TrainingMapComponent {
+export class TrainingMapComponent implements OnInit {
 
-  @Input() dogTrail: TrackPoint[] = points;
-  @Input() personTrail: TrackPoint[] = pointsBlue;
+  @Input() dogTrail: TrackPoint[] = [];
+  @Input() personTrail: TrackPoint[] = [];
 
-  points = points;
+  dogTrailOptions: any;
+  personTrailOptions: any;
+
+  ngOnInit() {
+    this.dogTrailOptions = {
+      path: this.dogTrail,
+      strokeColor: '#ff0000',
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+      };
+  
+    this.personTrailOptions = {
+      path: this.personTrail,
+      strokeColor: '#0000ff',
+      strokeOpacity: 1.0,
+      strokeWeight: 4,
+    };
+  
+  }
+
+
   myLatLng = { lat: 50.01146223876953, lng: 19.82978582382202 };
   mapOptions: google.maps.MapOptions = {
     center: this.myLatLng,
@@ -29,26 +48,23 @@ export class TrainingMapComponent {
 
   markerOptions: google.maps.MarkerOptions = {icon: this.icon};
 
-  dogTrailOptions = {
-    path: this.dogTrail,
-    strokeColor: '#ff0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-    };
-
-  personTrailOptions = {
-    path: this.personTrail,
-    strokeColor: '#0000ff',
-    strokeOpacity: 1.0,
-    strokeWeight: 4,
-  };
-
 
   displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow) {
-    console.log("marker click");
+    console.log("open window");
     infoWindow.open(marker);
   }
 
-  markStart() {}
-  markEnd() {}
+
+  // only for dog trail; TODO: handle person trail
+  markStart(index: number) {
+    this.dogTrail.splice(0, index);
+    this.dogTrailOptions = {...this.dogTrailOptions};
+  }
+
+  markEnd(index: number) {
+    this.dogTrail.splice(index+1);
+    this.dogTrailOptions = {...this.dogTrailOptions};
+  }
+  //
+
 }
