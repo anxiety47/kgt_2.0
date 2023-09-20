@@ -1,4 +1,4 @@
-import { TrackPoint } from "../models/trainings";
+import { TrackPoint } from "../../models/trainings";
 
 // tmp file
 export const points: TrackPoint[] = [

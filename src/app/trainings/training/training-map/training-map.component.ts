@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TrackPoint } from '../models/trainings';
+import { TrackPoint } from '../../models/trainings';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 
 @Component({

@@ -1,5 +1,5 @@
 import { DogTraining } from "../../models/trainings";
-import { points, pointsBlue } from "../../training-map/points";
+import { points, pointsBlue } from "../training-map/points";
 
 export const trainingData: DogTraining = {
 	id: "1",
