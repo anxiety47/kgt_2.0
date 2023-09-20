@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { points, pointsBlue } from '../training-map/points';
+import { trainingData } from './training-data/training-data';
 
 @Component({
   selector: 'app-training',
@@ -7,6 +7,8 @@ import { points, pointsBlue } from '../training-map/points';
   styleUrls: ['./training.component.scss']
 })
 export class TrainingComponent {
-  points = points;
-  pointsBlue = pointsBlue;
+  points = trainingData.dogTrackData.dogTrackPoints;
+  pointsBlue = trainingData.lostPersonTrackData.lostPersonTrackPoints;
+
+  trainingData = trainingData;
 }

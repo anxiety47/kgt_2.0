@@ -4,12 +4,14 @@ import { TrainingsListComponent } from './trainings-list/trainings-list.componen
 import { TrainingMapComponent } from './training-map/training-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { TrainingComponent } from './training/training.component';
+import { TrainingDataComponent } from './training/training-data/training-data.component';
 
 @NgModule({
   declarations: [
     TrainingMapComponent,
     TrainingsListComponent,
-    TrainingComponent
+    TrainingComponent,
+    TrainingDataComponent
   ],
   imports: [
     CommonModule,
