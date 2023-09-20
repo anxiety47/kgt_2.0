@@ -1,0 +1,11 @@
+{
+  "TRAININGS": {
+    "DETAILS": {
+      "INPUTS": {
+        "PERSON_TRAIL_LENGTH": {
+          "LABEL": "Długość śladu pozoranta"
+        }
+      }
+    }
+  }
+}

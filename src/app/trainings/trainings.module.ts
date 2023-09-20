@@ -5,6 +5,7 @@ import { TrainingMapComponent } from './training/training-map/training-map.compo
 import { GoogleMapsModule } from '@angular/google-maps';
 import { TrainingComponent } from './training/training.component';
 import { TrainingDataComponent } from './training/training-data/training-data.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TrainingDataComponent } from './training/training-data/training-data.co
   ],
   imports: [
     CommonModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    SharedModule
   ]
 })
 export class TrainingsModule { }
