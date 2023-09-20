@@ -1,0 +1,18 @@
+@import "/src/assets/scss/variables.scss";
+
+.training-container {
+  display: flex;
+
+  app-training-map,
+  .training-data {
+    flex: 1;
+  }
+
+  @media (max-width: $md) {
+    flex-direction: column;
+
+    app-training-map {
+      width: 100%;
+    }
+  }
+}

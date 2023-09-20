@@ -1,24 +1,32 @@
-<h1>training-map works!</h1>
 <google-map [options]="mapOptions" width="100%">
   <map-marker 
     *ngFor="let point of dogTrail; let i = index" 
     #marker="mapMarker"
     [position]="{ lat: point.lat, lng: point.lng }"
-    [options]="markerOptions"
+    [options]="redMarkerOptions"
     (mapClick)="displayInfoWindow(marker, infoWindow)">
     <map-info-window #infoWindow="mapInfoWindow">
-      <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }} //</p>
-      <p>lat {{ point.lat }} //</p>
-      <p>lng {{ point.lng }} //</p>
-      <button (click)="markStart(i)">Start</button>
-      <button (click)="markEnd(i)">End</button>
+      <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }}</p>
+      <p>lat: {{ point.lat }}</p>
+      <p>lng: {{ point.lng }}</p>
+      <button (click)="markDogStart(i)">Start</button>
+      <button (click)="markDogEnd(i)">End</button>
     </map-info-window>
   </map-marker>
 
-  <map-marker *ngFor="let point of personTrail" 
-  [position]="{ lat: point.lat, lng: point.lng }"
-  [options]="markerOptions">
-</map-marker>
+  <map-marker *ngFor="let point of personTrail; let i = index"
+    #personMarker="mapMarker"
+    [position]="{ lat: point.lat, lng: point.lng }"
+    [options]="blueMarkerOptions"
+    (mapClick)="displayInfoWindow(personMarker, personInfoWindow)">
+    <map-info-window #personInfoWindow="mapInfoWindow">
+      <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }}</p>
+      <p>lat: {{ point.lat }}</p>
+      <p>lng: {{ point.lng }}</p>
+      <button (click)="markPersonStart(i)">Start</button>
+      <button (click)="markPersonEnd(i)">End</button>
+    </map-info-window>
+  </map-marker>
 
   <map-polyline [options]="dogTrailOptions"></map-polyline>
   <map-polyline [options]="personTrailOptions"></map-polyline>

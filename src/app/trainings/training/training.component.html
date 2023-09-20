@@ -1,11 +1,13 @@
-<app-training-map
+<h1>[imię psa] [miejsce / data]</h1>
+
+<div class="training-container">
+
+  <app-training-map
   [dogTrail]="points"
   [personTrail]="pointsBlue">
 </app-training-map>
 
-<h2>Current dog trail:</h2>
-<ng-container *ngFor="let point of points; let i = index">
-  <p style="margin-left: 1rem">
-    {{i}}. {{point | json}}
-  </p>
-</ng-container>
+  <div class="training-data">
+    <p>data</p>
+  </div>
+</div>

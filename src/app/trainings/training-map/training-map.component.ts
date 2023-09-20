@@ -12,58 +12,71 @@ export class TrainingMapComponent implements OnInit {
   @Input() dogTrail: TrackPoint[] = [];
   @Input() personTrail: TrackPoint[] = [];
 
-  dogTrailOptions: any;
-  personTrailOptions: any;
+  dogTrailOptions!: google.maps.PolylineOptions;
+  personTrailOptions!: google.maps.PolylineOptions;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dogTrailOptions = {
       path: this.dogTrail,
-      strokeColor: '#ff0000',
+      strokeColor: '#FF0000',
       strokeOpacity: 1.0,
       strokeWeight: 2,
-      };
+    };
   
     this.personTrailOptions = {
       path: this.personTrail,
-      strokeColor: '#0000ff',
+      strokeColor: '#0000FF',
       strokeOpacity: 1.0,
-      strokeWeight: 4,
+      strokeWeight: 2,
     };
   
   }
 
-  myLatLng = { lat: 50.109205171465874, lng: 19.779058629646897 };
+  // TODO: wyśrodkować mapę na podstawie obu śladów; w jaki sposób określić zoom?
+  myLatLng = { lat: 50.0297879800, lng: 19.8864357546 };
   mapOptions: google.maps.MapOptions = {
     center: this.myLatLng,
-    zoom: 30,
+    zoom: 18,
   };
 
   iconSize = 6;
-  icon = {
-    url: "/assets/images/dot10px.svg",
+  iconBlue = {
+    url: "/assets/images/blue-dot-10.svg",
+    scaledSize: new google.maps.Size(this.iconSize, this.iconSize),
+    anchor: new google.maps.Point(this.iconSize/2, this.iconSize/2)
+  }
+  iconRed = {
+    url: "/assets/images/red-dot-10.svg",
     scaledSize: new google.maps.Size(this.iconSize, this.iconSize),
     anchor: new google.maps.Point(this.iconSize/2, this.iconSize/2)
   }
 
-  markerOptions: google.maps.MarkerOptions = {icon: this.icon};
+  redMarkerOptions: google.maps.MarkerOptions = {icon: this.iconRed};
+  blueMarkerOptions: google.maps.MarkerOptions = {icon: this.iconBlue};
 
 
-  displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow) {
+  displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow): void {
     console.log("open window");
     infoWindow.open(marker);
   }
 
-
-  // only for dog trail; TODO: handle person trail
-  markStart(index: number) {
+  markDogStart(index: number): void {
     this.dogTrail.splice(0, index);
     this.dogTrailOptions = {...this.dogTrailOptions};
   }
 
-  markEnd(index: number) {
-    this.dogTrail.splice(index+1);
+  markDogEnd(index: number): void {
+    this.dogTrail.splice(index + 1);
     this.dogTrailOptions = {...this.dogTrailOptions};
   }
-  //
 
+  markPersonStart(index: number): void {
+    this.personTrail.splice(0, index);
+    this.personTrailOptions = {...this.personTrailOptions};
+  }
+
+  markPersonEnd(index: number): void {
+    this.personTrail.splice(index + 1);
+    this.personTrailOptions = {...this.personTrailOptions};
+  }
 }
