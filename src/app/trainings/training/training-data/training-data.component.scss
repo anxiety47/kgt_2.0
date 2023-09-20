@@ -1,0 +1,16 @@
+.form-field {
+  padding: 0.5rem 0;
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+
+  label {
+    width: 30%;
+    align-self: center;
+  }
+
+  input, textarea {
+    padding: 0.5rem;
+    width: 70%;
+  }
+}

@@ -2,6 +2,7 @@
 
 .training-container {
   display: flex;
+  gap: 0.5rem;
 
   app-training-map,
   .training-data {
