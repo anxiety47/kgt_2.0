@@ -4,6 +4,33 @@
       "INPUTS": {
         "PERSON_TRAIL_LENGTH": {
           "LABEL": "Długość śladu pozoranta"
+        },
+        "PERSON_START_TIME": {
+          "LABEL": "Czas startu pozoranta"
+        },
+        "DELAY_TIME": {
+          "LABEL": "Czas odłożenia śladu"
+        },
+        "DOG_TRAIL_LENGTH": {
+          "LABEL": "Długość śladu psa"
+        },
+        "DOG_START_TIME": {
+          "LABEL": "Czas startu psa"
+        },
+        "DURATION": {
+          "LABEL": "Czas pracy psa"
+        },
+        "PERSON_NAME": {
+          "LABEL": "Pozorant"
+        },
+        "NOTES": {
+          "LABEL": "Uwagi przewodnika"
+        },
+        "WEATHER": {
+          "LABEL": "Pogoda"
+        },
+        "GROUND_TYPE": {
+          "LABEL": "Rodzaj podłoża"
         }
       }
     }

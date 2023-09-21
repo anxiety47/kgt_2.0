@@ -1,50 +1,81 @@
-<!-- TODO: add translation keys -->
-<div class="flex gap-2">
-  <div class="form-field">
-    <label>{{"TRAININGS.DETAILS.INPUTS.PERSON_TRAIL_LENGTH.LABEL" | translate}}</label>
-    <input>
+<form [formGroup]="form">
+  <div class="flex gap-2">
+    <div class="form-field">
+      <label for="personTrailLength">{{"TRAININGS.DETAILS.INPUTS.PERSON_TRAIL_LENGTH.LABEL" | translate}}</label>
+      <input 
+        id="personTrailLength"
+        formControlName="personTrailLength" 
+        type="text">
+    </div>
+    <div class="form-field">
+      <label for="personStartTime">{{"TRAININGS.DETAILS.INPUTS.PERSON_START_TIME.LABEL" | translate}}</label>
+      <input 
+        id="personStartTime"
+        formControlName="personStartTime"
+        type="text">
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <div class="form-field">
+      <label for="delayTime">{{"TRAININGS.DETAILS.INPUTS.DELAY_TIME.LABEL" | translate}}</label>
+      <input 
+        id="delayTime"
+        formControlName="delayTime"
+        type="text">
+    </div>
+    <div class="form-field">
+      <label for="dogTrailLength">{{"TRAININGS.DETAILS.INPUTS.DOG_TRAIL_LENGTH.LABEL" | translate}}</label>
+      <input 
+        id="dogTrailLength"
+        formControlName="dogTrailLength"
+        type="text">
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <div class="form-field">
+      <label for="dogStartTime">{{"TRAININGS.DETAILS.INPUTS.DOG_START_TIME.LABEL" | translate}}</label>
+      <input 
+        id="dogStartTime"
+        formControlName="dogStartTime"
+        type="text">
+    </div>
+    <div class="form-field">
+      <label for="duration">{{"TRAININGS.DETAILS.INPUTS.DURATION.LABEL" | translate}}</label>
+      <input
+        id="duration"
+        formControlName="duration"
+        type="text">
+    </div>
   </div>
   <div class="form-field">
-    <label>Czas startu pozoranta</label>
-    <input>
-  </div>
-</div>
-<div class="flex gap-2">
-  <div class="form-field">
-    <label>Czas odłożenia śladu</label>
-    <input>
+    <label for="personName">{{"TRAININGS.DETAILS.INPUTS.PERSON_NAME.LABEL" | translate}}</label>
+    <input
+      id="personName"
+      formControlName="personName"
+      type="text">
   </div>
   <div class="form-field">
-    <label>Długość śladu psa</label>
-    <input>
-  </div>
-</div>
-<div class="flex gap-2">
-  <div class="form-field">
-    <label>Czas startu psa</label>
-    <input>
+    <label for="notes">{{"TRAININGS.DETAILS.INPUTS.NOTES.LABEL" | translate}}</label>
+    <textarea 
+      id="notes"
+      formControlName="notes">
+    </textarea>
   </div>
   <div class="form-field">
-    <label>Czas pracy psa</label>
-    <input>
+    <label for="weather">{{"TRAININGS.DETAILS.INPUTS.WEATHER.LABEL" | translate}}</label>
+    <textarea 
+      id="weather"
+      formControlName="weather">
+    </textarea>
   </div>
-</div>
-<div class="form-field">
-  <label>Pozorant</label>
-  <input>
-</div>
-<div class="form-field">
-  <label>Uwagi przewodnika</label>
-  <textarea></textarea>
-</div>
-<div class="form-field">
-  <label>Pogoda</label>
-  <textarea></textarea>
-</div>
-<div class="form-field">
-  <label>Rodzaj podłoża</label>
-  <textarea></textarea>
-</div>
-<div>
-  <p>TODO: add attachments</p>
-</div>
+  <div class="form-field">
+    <label for="groundType">{{"TRAININGS.DETAILS.INPUTS.GROUND_TYPE.LABEL" | translate}}</label>
+    <textarea 
+      id="groundType"
+      formControlName="groundType">
+    </textarea>
+  </div>
+  <div>
+    <p>TODO: add attachments</p>
+  </div>
+</form>

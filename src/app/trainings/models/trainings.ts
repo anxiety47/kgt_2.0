@@ -1,7 +1,7 @@
 export interface DogTraining {
   id: string;
-  delayTime: string;
-  duration: string;
+  delayTime: string;  // format wyświetlania hh.mm.ss
+  duration: string;  // format wyświetlania hh.mm.ss
   weather: string;
   notes: string;
   groundType: string;
@@ -14,14 +14,14 @@ export interface DogTraining {
 export interface DogTrackData {
   dogTrackPoints: TrackPoint[];
   dogTrailLength: string;
-  dogStartTime: Date;
+  dogStartTime: Date;  // format wyświetlania hh.mm.ss
 }
 
 export interface LostPersonTrackData {
   lostPersonName: string;
   lostPersonTrackPoints: TrackPoint[];
   lostPersonTrailLength: string;
-  lostPersonStartTime: Date;
+  lostPersonStartTime: Date;  // format wyświetlania hh.mm.ss
 }
 
 
