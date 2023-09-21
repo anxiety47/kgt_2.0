@@ -3,7 +3,7 @@
     *ngFor="let point of dogTrail; let i = index" 
     #marker="mapMarker"
     [position]="{ lat: point.lat, lng: point.lng }"
-    [options]="redMarkerOptions"
+    [options]="i ? redMarkerOptions: firstRedMarker"
     (mapClick)="displayInfoWindow(marker, infoWindow)">
     <map-info-window #infoWindow="mapInfoWindow">
       <p>Date: {{ point.time | date: 'dd/MM/yyyy HH:mm' }}</p>

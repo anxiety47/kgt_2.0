@@ -50,10 +50,15 @@ export class TrainingMapComponent implements OnInit {
     scaledSize: new google.maps.Size(this.iconSize, this.iconSize),
     anchor: new google.maps.Point(this.iconSize/2, this.iconSize/2)
   }
+  iconRedBig = {
+    url: "/assets/images/red-dot-10.svg",
+    scaledSize: new google.maps.Size(this.iconSize*2, this.iconSize*2),
+    anchor: new google.maps.Point(this.iconSize/2, this.iconSize/2)
+  }
 
   redMarkerOptions: google.maps.MarkerOptions = {icon: this.iconRed};
   blueMarkerOptions: google.maps.MarkerOptions = {icon: this.iconBlue};
-
+  firstRedMarker: google.maps.MarkerOptions = {icon: this.iconRedBig};
 
   displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow): void {
     console.log("open window");
