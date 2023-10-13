@@ -1,7 +1,14 @@
-﻿namespace KGT.Data.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace KGT.Data.Models
 {
     public class DogEvent
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
+        public int DogEventId { get; set; }
         public int DogId { get; set; }
         public Dog Dog { get; set; }
 

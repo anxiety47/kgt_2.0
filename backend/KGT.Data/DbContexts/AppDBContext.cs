@@ -24,8 +24,6 @@ namespace KGT.Data.DbContexts
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<GuideEvent>().HasKey(ge => new { ge.GuideId, ge.EventId });
-            modelBuilder.Entity<DogTraining>().HasKey(dt => new { dt.DogId, dt.TrainingId });
-            modelBuilder.Entity<DogEvent>().HasKey(de => new { de.DogId, de.EventId });
             modelBuilder.Entity<DogCertificate>().HasKey(dc => new { dc.DogId, dc.CertificateId });
 
             //modelBuilder.Entity<GuideAction>().HasOne(m => m.Action)
@@ -56,7 +54,7 @@ namespace KGT.Data.DbContexts
                 .WithOne(de => de.Dog)
                 .HasForeignKey(de => de.DogId);
 
-            //guide events
+            //Guide events
             modelBuilder.Entity<Guide>().HasMany(g => g.GuideEvents)
                 .WithOne(ge => ge.Guide)
                 .HasForeignKey(ge => ge.GuideId);

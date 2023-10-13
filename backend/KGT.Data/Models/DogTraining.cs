@@ -9,6 +9,10 @@ namespace KGT.Data.Models
     [Table("DogTrainings")]
     public class DogTraining
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required]
+        public int DogTrainingId { get; set; }
+
         [Required]
         public int TrainingId { get; set; }
         public virtual Training Training { get; set; }

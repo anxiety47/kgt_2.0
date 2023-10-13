@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,8 +8,7 @@ namespace KGT.Data.Models
     [Table("Certificates")]
     public class Certificate
     {
-        [DatabaseGenerated(DatabaseGeneratedOption
-            .Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int CertificateId { get; set; }
         [Required]

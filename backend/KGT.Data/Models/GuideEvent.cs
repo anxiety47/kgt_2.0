@@ -1,4 +1,6 @@
-﻿namespace KGT.Data.Models
+﻿using System;
+
+namespace KGT.Data.Models
 {
     public class GuideEvent
     {
