@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { faDog, faMap } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'kgt';
+  dogIcon = faDog;
+  mapIcon = faMap;
 
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('pl');

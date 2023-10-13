@@ -1,4 +1,21 @@
-<header></header>
+<header>
+  <ul>
+    <li>
+      <a [routerLink]="['/dogs']">
+        <fa-icon [icon]="dogIcon"></fa-icon> Psy
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/trainings']">
+        <fa-icon [icon]="mapIcon"></fa-icon> Treningi
+      </a>
+    </li>
+  </ul>
+  <div class="flex align-items-center">
+    <!-- login, registration -->
+    <div class="avatar"></div>
+  </div>
+</header>
 <main>
   <router-outlet></router-outlet>
 </main>

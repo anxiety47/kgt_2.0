@@ -6,6 +6,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { DogTrainingComponent } from './dog-training/dog-training.component';
 import { DogTrainingDataComponent } from './dog-training/dog-training-data/dog-training-data.component';
 import { SharedModule } from '../shared/shared.module';
+import { TrainingsRoutingModule } from './trainings-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    TrainingsRoutingModule,
     GoogleMapsModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class TrainingsModule { }
