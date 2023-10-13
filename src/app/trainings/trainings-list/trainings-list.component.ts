@@ -13,6 +13,6 @@ export class TrainingsListComponent implements OnInit {
   public ngOnInit(): void {}
 
   public goToTraining(): void {
-    this.router.navigate(['training']);
+    this.router.navigate(['dog-training']);
   }
 }

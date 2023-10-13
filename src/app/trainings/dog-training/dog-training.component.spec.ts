@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
-import { TrainingComponent } from './training.component';
+import { DogTrainingComponent } from './dog-training.component';
 
 describe('TrainingComponent', () => {
-  let component: TrainingComponent;
-  let fixture: ComponentFixture<TrainingComponent>;
+  let component: DogTrainingComponent;
+  let fixture: ComponentFixture<DogTrainingComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TrainingComponent],
+      declarations: [DogTrainingComponent],
       schemas: [NO_ERRORS_SCHEMA],
     });
-    fixture = TestBed.createComponent(TrainingComponent);
+    fixture = TestBed.createComponent(DogTrainingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
