@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGT.API", "KGT.API.csproj", "{070BBEE9-EB3D-4727-961B-847F69D2A15F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B22B9474-2A3C-410A-973C-CF5AA2A578DC}
+	EndGlobalSection
+EndGlobal
