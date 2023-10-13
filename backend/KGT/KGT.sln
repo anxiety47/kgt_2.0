@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGT.API", "KGT.API.csproj", "{070BBEE9-EB3D-4727-961B-847F69D2A15F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KGT.Data", "..\KGT.Data\KGT.Data.csproj", "{05AD3F70-980A-4CEC-9ABB-86549924FBDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
