@@ -1,80 +1,53 @@
-<form [formGroup]="form">
+<form [formGroup]="form" class="flex flex-column gap-2">
   <div class="flex gap-2">
-    <div class="form-field">
-      <label for="personTrailLength">{{"TRAININGS.DETAILS.INPUTS.PERSON_TRAIL_LENGTH.LABEL" | translate}}</label>
-      <input 
-        id="personTrailLength"
-        formControlName="personTrailLength" 
-        type="text">
-    </div>
-    <div class="form-field">
-      <label for="personStartTime">{{"TRAININGS.DETAILS.INPUTS.PERSON_START_TIME.LABEL" | translate}}</label>
-      <input 
-        id="personStartTime"
-        formControlName="personStartTime"
-        type="text">
-    </div>
+    <label class="form-field">
+      {{"TRAININGS.DETAILS.INPUTS.PERSON_TRAIL_LENGTH.LABEL" | translate}}
+      <input formControlName="personTrailLength" type="text">
+    </label>
+    <label>
+      {{"TRAININGS.DETAILS.INPUTS.PERSON_START_TIME.LABEL" | translate}}
+      <input formControlName="personStartTime" type="text">
+    </label>
   </div>
   <div class="flex gap-2">
-    <div class="form-field">
-      <label for="delayTime">{{"TRAININGS.DETAILS.INPUTS.DELAY_TIME.LABEL" | translate}}</label>
-      <input 
-        id="delayTime"
-        formControlName="delayTime"
-        type="text">
-    </div>
-    <div class="form-field">
-      <label for="dogTrailLength">{{"TRAININGS.DETAILS.INPUTS.DOG_TRAIL_LENGTH.LABEL" | translate}}</label>
-      <input 
-        id="dogTrailLength"
-        formControlName="dogTrailLength"
-        type="text">
-    </div>
+    <label>
+      {{"TRAININGS.DETAILS.INPUTS.DELAY_TIME.LABEL" | translate}}
+      <input formControlName="delayTime" type="text">
+    </label>
+    <label>
+      {{"TRAININGS.DETAILS.INPUTS.DOG_TRAIL_LENGTH.LABEL" | translate}}
+      <input formControlName="dogTrailLength" type="text">
+    </label>
   </div>
   <div class="flex gap-2">
-    <div class="form-field">
-      <label for="dogStartTime">{{"TRAININGS.DETAILS.INPUTS.DOG_START_TIME.LABEL" | translate}}</label>
-      <input 
-        id="dogStartTime"
-        formControlName="dogStartTime"
-        type="text">
-    </div>
-    <div class="form-field">
-      <label for="duration">{{"TRAININGS.DETAILS.INPUTS.DURATION.LABEL" | translate}}</label>
-      <input
-        id="duration"
-        formControlName="duration"
-        type="text">
-    </div>
+    <label>
+      {{"TRAININGS.DETAILS.INPUTS.DOG_START_TIME.LABEL" | translate}}
+      <input formControlName="dogStartTime" type="text">
+    </label>
+    <label>
+      {{"TRAININGS.DETAILS.INPUTS.DURATION.LABEL" | translate}}
+      <input formControlName="duration" type="text">
+    </label>
   </div>
-  <div class="form-field">
-    <label for="personName">{{"TRAININGS.DETAILS.INPUTS.PERSON_NAME.LABEL" | translate}}</label>
-    <input
-      id="personName"
-      formControlName="personName"
-      type="text">
-  </div>
-  <div class="form-field">
-    <label for="notes">{{"TRAININGS.DETAILS.INPUTS.NOTES.LABEL" | translate}}</label>
-    <textarea 
-      id="notes"
-      formControlName="notes">
-    </textarea>
-  </div>
-  <div class="form-field">
-    <label for="weather">{{"TRAININGS.DETAILS.INPUTS.WEATHER.LABEL" | translate}}</label>
-    <textarea 
-      id="weather"
-      formControlName="weather">
-    </textarea>
-  </div>
-  <div class="form-field">
-    <label for="groundType">{{"TRAININGS.DETAILS.INPUTS.GROUND_TYPE.LABEL" | translate}}</label>
-    <textarea 
-      id="groundType"
-      formControlName="groundType">
-    </textarea>
-  </div>
+  <label>
+    {{"TRAININGS.DETAILS.INPUTS.PERSON_NAME.LABEL" | translate}}
+    <input formControlName="personName" type="text">
+  </label>
+  <label>
+    {{"TRAININGS.DETAILS.INPUTS.NOTES.LABEL" | translate}}
+    <textarea formControlName="notes">
+      </textarea>
+  </label>
+  <label>
+    {{"TRAININGS.DETAILS.INPUTS.WEATHER.LABEL" | translate}}
+    <textarea formControlName="weather">
+      </textarea>
+  </label>
+  <label>
+    {{"TRAININGS.DETAILS.INPUTS.GROUND_TYPE.LABEL" | translate}}
+    <textarea formControlName="groundType">
+      </textarea>
+  </label>
   <div>
     <p>TODO: add attachments</p>
   </div>

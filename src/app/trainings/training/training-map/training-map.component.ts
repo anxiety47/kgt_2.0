@@ -61,7 +61,6 @@ export class TrainingMapComponent implements OnInit {
   firstRedMarker: google.maps.MarkerOptions = {icon: this.iconRedBig};
 
   displayInfoWindow(marker: MapMarker, infoWindow: MapInfoWindow): void {
-    console.log("open window");
     infoWindow.open(marker);
   }
 

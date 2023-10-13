@@ -1,16 +1,20 @@
-.form-field {
-  padding: 0.5rem 0;
-  flex: 1;
+@import "/src/assets/scss/variables.scss";
+
+form > div {
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+}
+
+label {
+  align-self: center;
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
 
-  label {
-    width: 30%;
-    align-self: center;
-  }
-
-  input, textarea {
-    padding: 0.5rem;
-    width: 70%;
-  }
+input,
+textarea {
+  padding: 0.5rem;
 }
