@@ -4,7 +4,7 @@ import { TrainingsListComponent } from './trainings-list/trainings-list.componen
 import { TrainingMapComponent } from './dog-training/training-map/training-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { DogTrainingComponent } from './dog-training/dog-training.component';
-import { TrainingDataComponent } from './dog-training/training-data/training-data.component';
+import { DogTrainingDataComponent } from './dog-training/dog-training-data/dog-training-data.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { SharedModule } from '../shared/shared.module';
     TrainingMapComponent,
     TrainingsListComponent,
     DogTrainingComponent,
-    TrainingDataComponent
+    DogTrainingDataComponent
   ],
   imports: [
     CommonModule,

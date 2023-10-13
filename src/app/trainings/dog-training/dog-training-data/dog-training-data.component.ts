@@ -4,10 +4,10 @@ import { DogTraining } from '../../models/trainings';
 
 @Component({
   selector: 'app-training-data',
-  templateUrl: './training-data.component.html',
-  styleUrls: ['./training-data.component.scss']
+  templateUrl: './dog-training-data.component.html',
+  styleUrls: ['./dog-training-data.component.scss']
 })
-export class TrainingDataComponent implements OnInit {
+export class DogTrainingDataComponent implements OnInit {
 
   @Input() trainingData!: DogTraining;
   form: FormGroup = this.fb.group({

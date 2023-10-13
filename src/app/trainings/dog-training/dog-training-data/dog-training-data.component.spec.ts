@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TrainingDataComponent } from './training-data.component';
+import { DogTrainingDataComponent } from './dog-training-data.component';
 import { TrainingsModule } from '../../trainings.module';
 
-describe('TrainingDataComponent', () => {
-  let component: TrainingDataComponent;
-  let fixture: ComponentFixture<TrainingDataComponent>;
+describe('DogTrainingDataComponent', () => {
+  let component: DogTrainingDataComponent;
+  let fixture: ComponentFixture<DogTrainingDataComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TrainingDataComponent],
+      declarations: [DogTrainingDataComponent],
       imports: [TrainingsModule],
     });
-    fixture = TestBed.createComponent(TrainingDataComponent);
+    fixture = TestBed.createComponent(DogTrainingDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

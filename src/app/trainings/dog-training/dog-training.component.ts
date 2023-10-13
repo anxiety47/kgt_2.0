@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { trainingData } from './training-data/training-data';
+import { trainingData } from './dog-training-data/training-data';
 
 @Component({
   selector: 'app-dog-training',
