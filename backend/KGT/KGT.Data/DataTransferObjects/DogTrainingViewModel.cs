@@ -7,7 +7,7 @@ namespace KGT.Data.DataTransferObjects
     {
         public TrainingModel Training { get; set; }
         public int TrainingId { get; set; }
-        public DogModel Dog { get; set; }
+        public DogBasicInfo Dog { get; set; }
         public int DogId { get; set; }
         public string LostPerson { get; set; }
         public string DogTrackFilename { get; set; }

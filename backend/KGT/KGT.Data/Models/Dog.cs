@@ -1,16 +1,16 @@
-﻿using System;
+﻿using KGT.Data.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KGT.Data.Models
 {
-    [Table("Dogs")]
-    public class Dog
+    public class Dog : IEntity<int>
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
-        public int DogId { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         public string? Breed { get; set; }
@@ -23,6 +23,5 @@ namespace KGT.Data.Models
         public virtual IList<DogTraining>? DogTrainings { get; set; }
         public virtual IList<DogEvent>? DogEvents { get; set; }
         public virtual List<DogCertificate>? DogCertificates { get; set; }
-
     }
 }

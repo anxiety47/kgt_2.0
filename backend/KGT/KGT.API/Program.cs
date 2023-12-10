@@ -1,5 +1,8 @@
 using KGT.Data.DbContexts;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Proxies;
+using AutoMapper;
+using KGT.Data.Repositories;
 
 namespace KGT.API
 {
@@ -11,7 +14,7 @@ namespace KGT.API
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("KgtDataDb"),
+                options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("KgtDataDb"),
                 sqlServerOptionsAction: sqlOptions =>
                 {
                     sqlOptions.EnableRetryOnFailure(
@@ -26,6 +29,10 @@ namespace KGT.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            builder.Services.AddScoped<IDogsRepository, DogsRepository>();
 
             var app = builder.Build();
 

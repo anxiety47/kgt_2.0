@@ -10,10 +10,10 @@ namespace KGT.Data.Models
         [Required]
         public int DogEventId { get; set; }
         public int DogId { get; set; }
-        public Dog Dog { get; set; }
+        public virtual Dog Dog { get; set; }
 
         public int EventId { get; set; }
-        public Event Event { get; set; }
+        public virtual Event Event { get; set; }
 
         public string? LostPerson { get; set; }
         public string DogTrackBlobUrl { get; set; }

@@ -11,7 +11,7 @@ namespace KGT.Data.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
-        public int GuideId { get; set; }
+        public int Id { get; set; }
         public string IdentityId { get; set; } // B2CId? 
         [Required]
         public string FirstName { get; set; }

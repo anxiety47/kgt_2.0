@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace KGT.Data.DataTransferObjects
 {
-    public class DogModel
+    public class DogDetails
     {
         public int DogId { get; set; }
         public string Name { get; set; }
@@ -13,8 +13,5 @@ namespace KGT.Data.DataTransferObjects
         public string PhotoBlobUrl { get; set; }
         public IdNameModel GuideIdAndName { get; set; }
         public List<int> TrainingIds { get; set; }
-        public List<int> EventIds { get; set; }
-        public List<int> CertificateIds { get; set; }
-
     }
 }
