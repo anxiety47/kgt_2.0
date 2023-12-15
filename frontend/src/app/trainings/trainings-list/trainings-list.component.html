@@ -1,5 +1,23 @@
-<h1>trainings list</h1>
-<!-- add table with trainings -->
-
-<!-- tmp button -->
-<button (click)="goToTraining()">Go to training</button>
+<!-- [KEYS] TODO: Use translation keys -->
+<h1>Trainings' list</h1>
+<p-table [value]="trainingsList" responsiveLayout="stack">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Location</th>
+        <th>Address</th>
+        <th>Date</th>
+        <th>Actions</th> <!-- column without label? -->
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-training>
+    <tr>
+      <td>{{ training.location }}</td>
+      <td>{{ training.address }}</td>
+      <td>{{ training.date | date:"dd-MM-yyyy HH:mm" }}</td>
+      <td class="flex gap-3 justify-content-start">
+        <button (click)="goToTraining()">Go to training</button>
+        <button (click)="addDogToTraining()">Add dog to training</button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

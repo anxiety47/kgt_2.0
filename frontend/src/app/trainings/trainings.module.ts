@@ -7,6 +7,7 @@ import { DogTrainingComponent } from './dog-training/dog-training.component';
 import { DogTrainingDataComponent } from './dog-training/dog-training-data/dog-training-data.component';
 import { SharedModule } from '../shared/shared.module';
 import { TrainingsRoutingModule } from './trainings-routing.module';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TrainingsRoutingModule } from './trainings-routing.module';
   ],
   imports: [
     CommonModule,
+    TableModule,
     TrainingsRoutingModule,
     GoogleMapsModule,
     SharedModule,
