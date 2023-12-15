@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TrainingListItem } from '../models/trainings';
-import { TrainingsApiService } from '../services/trainings-api/trainings-api.service';
+import { TrainingListItem } from '../../models/trainings';
+import { TrainingsApiService } from '../../services/trainings-api/trainings-api.service';
 import { Subscription } from 'rxjs';
 
 @Component({

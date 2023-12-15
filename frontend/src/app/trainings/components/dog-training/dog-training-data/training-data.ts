@@ -1,4 +1,4 @@
-import { DogTraining } from "../../models/trainings";
+import { DogTraining } from "src/app/trainings/models/trainings";
 import { points, pointsBlue } from "../training-map/points";
 
 export const trainingData: DogTraining = {
