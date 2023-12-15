@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TrainingListItem } from '../../models/trainings';
 import { TrainingsApiService } from '../../services/trainings-api/trainings-api.service';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './trainings-list.component.html',
   styleUrls: ['./trainings-list.component.scss']
 })
-export class TrainingsListComponent implements OnInit {
+export class TrainingsListComponent implements OnInit, OnDestroy {
 
   public trainingsList: TrainingListItem[] = [];
   private subscriptions: Subscription[] = [];
@@ -23,6 +23,10 @@ export class TrainingsListComponent implements OnInit {
     this.subscriptions.push(this.trainingsApiService.getTrainingsList().subscribe(trainings => {
       this.trainingsList = trainings;
     }));
+  }
+
+  public ngOnDestroy(): void {
+    this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
   public goToTraining(): void {
