@@ -1,19 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TrainingListItem } from '../models/trainings';
-
-// use column - dynamic table
-interface Column {
-  field: string;
-  header: string;
-}
-
-const tmp: TrainingListItem[] = [{
-  id: '1',
-  date: new Date(),
-  location: 'test',
-  address: 'test'
-}]
+import { TrainingsApiService } from '../services/trainings-api/trainings-api.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-trainings-list',
@@ -23,14 +12,24 @@ const tmp: TrainingListItem[] = [{
 export class TrainingsListComponent implements OnInit {
 
   public trainingsList: TrainingListItem[] = [];
+  private subscriptions: Subscription[] = [];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private trainingsApiService: TrainingsApiService,
+  ) {}
 
   public ngOnInit(): void {
-    this.trainingsList = tmp;
+    this.subscriptions.push(this.trainingsApiService.getTrainingsList().subscribe(trainings => {
+      this.trainingsList = trainings;
+    }));
   }
 
   public goToTraining(): void {
     this.router.navigate(['dog-training']);
+  }
+
+  public addDogToTraining(): void {
+    console.log('add new dog to training list');
   }
 }
