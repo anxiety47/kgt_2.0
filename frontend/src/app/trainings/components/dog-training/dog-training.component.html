@@ -1,11 +1,10 @@
 <h1>[imię psa] [miejsce / data]</h1>
 
 <div class="training-container">
-
   <app-training-map
-  [dogTrail]="points"
-  [personTrail]="pointsBlue">
-</app-training-map>
+    [dogTrail]="dogTrailPoints"
+    [personTrail]="personTrailPoints">
+  </app-training-map>
 
   <div class="training-data">
     <app-training-data [trainingData]="trainingData"></app-training-data>
