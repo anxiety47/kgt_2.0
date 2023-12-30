@@ -16,7 +16,6 @@ namespace KGT.Data.Repositories
             _mapper = mapper;
         }
 
-
         public List<DogBasicInfo> GetAllDogsBasicInfo()
         {
             var dogs = GetAll();
@@ -31,6 +30,24 @@ namespace KGT.Data.Repositories
                 return null;
             var dogDetails = _mapper.Map<DogDetails>(dog);
             return dogDetails;
+        }
+
+        public async Task<int> AddAsync(AddNewDog newDogDetails)
+        {
+            var guide = await Context.Guides.FindAsync(newDogDetails.GuideId);
+            if (guide == null)
+            {
+                throw new System.Exception($"Guide with id {newDogDetails.GuideId} was not found");
+            }
+            var dog = _mapper.Map<Dog>(newDogDetails);
+            dog.Guide = guide;
+            return await this.AddAsync(dog);
+        }
+
+        public async Task UpdateAsync(UpdateDogDetails updatedDetails)
+        {
+            var dog = _mapper.Map<Dog>(updatedDetails);
+            await this.ModifyAsync(dog);
         }
     }
 }

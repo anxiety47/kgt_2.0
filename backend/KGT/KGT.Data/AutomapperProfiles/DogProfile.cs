@@ -22,6 +22,7 @@ namespace KGT.Data.AutomapperProfiles
 					dest => dest.GuideIdAndName,
 					opt => opt.MapFrom(src => new IdNameModel { Id = src.Guide.Id, Name = src.Guide.FirstName + " " + src.Guide.LastName })
 				);
+			// TODO move to GuideProfile?
 			CreateMap<Guide, IdNameModel>()
 				.ForMember(
 					dest => dest.Id,
@@ -31,6 +32,19 @@ namespace KGT.Data.AutomapperProfiles
 					dest => dest.Name,
 					opt => opt.MapFrom(src => src.FirstName + " " + src.LastName)
 				);
+			CreateMap<DogDetails, Dog>()
+				.ForMember(
+					dest => dest.Id,
+					opt => opt.MapFrom(src => src.DogId)
+				);
+
+			CreateMap<AddNewDog, Dog>();
+			CreateMap<UpdateDogDetails, Dog>()
+				.ForMember(
+					dest => dest.Id,
+					opt => opt.MapFrom(src => src.DogId)
+				);
+
 		}
 	}
 }

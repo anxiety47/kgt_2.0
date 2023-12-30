@@ -33,8 +33,8 @@ namespace KGT.Data.DbContexts
             //modelBuilder.Entity<GuideEvent>().HasOne(m => m.Event)
             //    .WithMany(m => m.GuideEvents)
             //    .HasForeignKey(m => m.EventId);
-
-
+            modelBuilder.Entity<Guide>().HasMany(g => g.Dogs)
+                .WithOne(d => d.Guide);
             //dog trainings
             modelBuilder.Entity<Training>().HasMany(t => t.DogTrainings)
                 .WithOne(dt => dt.Training)

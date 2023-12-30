@@ -24,10 +24,11 @@ namespace KGT.Data.Repositories
         }
 
 
-        public virtual async Task AddAsync(T item)
+        public virtual async Task<TPrimaryKey> AddAsync(T item)
         {
             await DbSet.AddAsync(item);
             Context.SaveChanges();
+            return item.Id;
         }
 
         // TODO: we can consider soft delete later
@@ -49,11 +50,12 @@ namespace KGT.Data.Repositories
             return await DbSet.FindAsync(id);
         }
 
-        public virtual async Task ModifyAsync(T item)
+        public virtual async Task<TPrimaryKey> ModifyAsync(T item)
         {
             var original = await GetByIdAsync(item.Id);
             Context.Entry(original).CurrentValues.SetValues(item);
             await Context.SaveChangesAsync();
+            return item.Id;
         }
     }
 }
