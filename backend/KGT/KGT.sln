@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KGT.API", "KGT.API\KGT.API.csproj", "{070BBEE9-EB3D-4727-961B-847F69D2A15F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KGT.Data", "KGT.Data\KGT.Data.csproj", "{05AD3F70-980A-4CEC-9ABB-86549924FBDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64A92164-E392-4245-AFBD-89D69AB8C815}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{070BBEE9-EB3D-4727-961B-847F69D2A15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05AD3F70-980A-4CEC-9ABB-86549924FBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B22B9474-2A3C-410A-973C-CF5AA2A578DC}
+	EndGlobalSection
+EndGlobal
