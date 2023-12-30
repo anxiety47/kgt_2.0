@@ -12,8 +12,8 @@ namespace KGT.Data.Repositories
     {
         Task<T> GetByIdAsync(TPrimaryKey id);
         List<T> GetAll();
-        Task AddAsync(T item);
-        Task ModifyAsync(T item);
+        Task<TPrimaryKey> AddAsync(T item);
+        Task<TPrimaryKey> ModifyAsync(T item);
         Task DeleteAsync(TPrimaryKey id);
     }
 }

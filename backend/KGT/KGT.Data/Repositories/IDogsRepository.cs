@@ -9,5 +9,7 @@ namespace KGT.Data.Repositories
     {
         List<DogBasicInfo> GetAllDogsBasicInfo();
         Task<DogDetails> GetDogDetails(int id);
+        Task<int> AddAsync(AddNewDog dogDetails);
+        Task UpdateAsync(UpdateDogDetails updatedDetails);
     }
 }

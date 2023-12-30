@@ -30,5 +30,19 @@ namespace KGT.API.Controllers
         {
             return await _dogsRepository.GetDogDetails(id);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(AddNewDog newDogDetails)
+        {
+            var id = await _dogsRepository.AddAsync(newDogDetails);
+            return Ok(id);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(UpdateDogDetails updatedDetails)
+        {
+            await _dogsRepository.UpdateAsync(updatedDetails);
+            return Ok();
+        }
     }
 }
