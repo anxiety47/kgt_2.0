@@ -16,7 +16,7 @@ namespace KGT.API
                 {
                     // TODO emulator?
                     CosmosClient client = new CosmosClient(
-                        connectionString: "AccountEndpoint=https://kgtcosmosdb.documents.azure.com:443/;AccountKey=MEMe3mhQKE73blAKT0doZbigShG1Ig05NgCk9E6iWbX9fJc8Aw5Sn36FIIDMDIn4UOqOis7eog5JACDbLxTpEg==;"
+                        connectionString: "<connectionstring>"
                     );
                     return client;
                 });
@@ -27,7 +27,7 @@ namespace KGT.API
                 {
                     // TODO keyvault
                     CosmosClient client = new CosmosClient(
-                        connectionString: "AccountEndpoint=https://kgtcosmosdb.documents.azure.com:443/;AccountKey=MEMe3mhQKE73blAKT0doZbigShG1Ig05NgCk9E6iWbX9fJc8Aw5Sn36FIIDMDIn4UOqOis7eog5JACDbLxTpEg==;"
+                        connectionString: "<connectionstring>"
                     );
                     return client;
                 });
