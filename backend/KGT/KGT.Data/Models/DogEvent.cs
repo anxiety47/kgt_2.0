@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using KGT.Data.Models.Dogs;
 
 namespace KGT.Data.Models
 {

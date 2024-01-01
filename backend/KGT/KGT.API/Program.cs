@@ -1,8 +1,6 @@
-using KGT.Data.DbContexts;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Proxies;
-using AutoMapper;
-using KGT.Data.Repositories;
+using KGT.API.Services;
+using KGT.Data.CosmosDb;
+using Microsoft.Azure.Cosmos;
 
 namespace KGT.API
 {
@@ -12,17 +10,29 @@ namespace KGT.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<AppDbContext>(options =>
+            if (builder.Environment.IsDevelopment())
             {
-                options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("KgtDataDb"),
-                sqlServerOptionsAction: sqlOptions =>
+                builder.Services.AddSingleton<CosmosClient>((_) =>
                 {
-                    sqlOptions.EnableRetryOnFailure(
-                    maxRetryCount: 5,
-                    maxRetryDelay: TimeSpan.FromSeconds(90),
-                    errorNumbersToAdd: null);
+                    // TODO emulator?
+                    CosmosClient client = new CosmosClient(
+                        connectionString: "<connectionstring>"
+                    );
+                    return client;
                 });
-            });
+            }
+            else
+            {
+                builder.Services.AddSingleton<CosmosClient>((_) =>
+                {
+                    // TODO keyvault
+                    CosmosClient client = new CosmosClient(
+                        connectionString: "<connectionstring>"
+                    );
+                    return client;
+                });
+            }
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -32,7 +42,9 @@ namespace KGT.API
 
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            builder.Services.AddScoped<IDogsRepository, DogsRepository>();
+            // TODO builder.Services.AddScoped<IDogsRepository, DogsRepository>();
+            builder.Services.AddScoped<IDogsService, DogsService>();
+            builder.Services.AddScoped<IDogsCosmosService, DogsCosmosService>();
 
             var app = builder.Build();
 

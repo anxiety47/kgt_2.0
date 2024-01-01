@@ -1,5 +1,4 @@
-﻿
-namespace KGT.Data.Repositories
+﻿namespace KGT.Data.Models
 {
     public interface IEntity<TPrimaryKey>
         where TPrimaryKey : struct
