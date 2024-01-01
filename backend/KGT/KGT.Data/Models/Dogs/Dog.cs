@@ -1,5 +1,4 @@
-﻿using KGT.Data.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace KGT.Data.Models.Dogs

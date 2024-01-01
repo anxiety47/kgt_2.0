@@ -1,7 +1,6 @@
 using KGT.API.Services;
 using KGT.Data.CosmosDb;
 using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
 
 namespace KGT.API
 {
@@ -10,18 +9,6 @@ namespace KGT.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            //builder.Services.AddDbContext<AppDbContext>(options =>
-            //{
-            //    options.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("KgtDataDb"),
-            //    sqlServerOptionsAction: sqlOptions =>
-            //    {
-            //        sqlOptions.EnableRetryOnFailure(
-            //        maxRetryCount: 5,
-            //        maxRetryDelay: TimeSpan.FromSeconds(90),
-            //        errorNumbersToAdd: null);
-            //    });
-            //});
 
             if (builder.Environment.IsDevelopment())
             {
