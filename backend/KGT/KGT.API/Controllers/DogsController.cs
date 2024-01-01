@@ -1,5 +1,5 @@
-﻿using KGT.Data.DataTransferObjects;
-using KGT.Data.Repositories;
+﻿using KGT.API.Services;
+using KGT.Data.DataTransferObjects.Dogs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KGT.API.Controllers
@@ -9,40 +9,40 @@ namespace KGT.API.Controllers
     public class DogsController : ControllerBase
     {
 
-        private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IDogsRepository _dogsRepository;
+        private readonly ILogger<DogsController> _logger;
+        private readonly IDogsService _dogsService;
 
-        public DogsController(ILogger<WeatherForecastController> logger, IDogsRepository dogsRepository)
+        public DogsController(ILogger<DogsController> logger, IDogsService dogsService)
         {
             _logger = logger;
-            _dogsRepository = dogsRepository;
+            _dogsService = dogsService;
         }
 
         [HttpGet]
-        public List<DogBasicInfo> GetAll()
+        public async Task<List<DogBasicInfo>> GetAll()
         {
-            _logger.LogInformation("It works!");
-            return _dogsRepository.GetAllDogsBasicInfo();
+            _logger.LogInformation("Getting all dogs");
+            return await _dogsService.GetAllDogsBasicInfo();
         }
 
         [HttpGet("{id}")]
-        public async Task<DogDetails> Get(int id)
+        public async Task<DogDetails> Get(Guid id)
         {
-            return await _dogsRepository.GetDogDetails(id);
+            return await _dogsService.GetDogDetails(id);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Add(AddNewDog newDogDetails)
-        {
-            var id = await _dogsRepository.AddAsync(newDogDetails);
-            return Ok(id);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> Add(AddNewDog newDogDetails)
+        //{
+        //    var id = await _dogsRepository.AddAsync(newDogDetails);
+        //    return Ok(id);
+        //}
 
-        [HttpPut]
-        public async Task<IActionResult> Update(UpdateDogDetails updatedDetails)
-        {
-            await _dogsRepository.UpdateAsync(updatedDetails);
-            return Ok();
-        }
+        //[HttpPut]
+        //public async Task<IActionResult> Update(UpdateDogDetails updatedDetails)
+        //{
+        //    await _dogsRepository.UpdateAsync(updatedDetails);
+        //    return Ok();
+        //}
     }
 }

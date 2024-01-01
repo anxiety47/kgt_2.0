@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KGT.Data.DataTransferObjects
+namespace KGT.Data.DataTransferObjects.Dogs
 {
     public class AddNewDog
     {
