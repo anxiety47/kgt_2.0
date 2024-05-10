@@ -10,6 +10,8 @@ import { TrainingsListComponent } from './components/trainings-list/trainings-li
 import { DogTrainingComponent } from './components/dog-training/dog-training.component';
 import { DogTrainingDataComponent } from './components/dog-training/dog-training-data/dog-training-data.component';
 import { TrainingDetailsComponent } from './components/training-details/training-details.component';
+import { AddDogToTrainingComponent } from './components/add-dog-to-training/add-dog-to-training.component';
+import { EditTrainingComponent } from './components/edit-training/edit-training.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { TrainingDetailsComponent } from './components/training-details/training
     DogTrainingComponent,
     DogTrainingDataComponent,
     TrainingDetailsComponent,
+    AddDogToTrainingComponent,
+    EditTrainingComponent,
   ],
   imports: [
     CommonModule,

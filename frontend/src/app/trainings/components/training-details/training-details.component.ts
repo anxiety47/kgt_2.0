@@ -20,4 +20,12 @@ export class TrainingDetailsComponent {
   goToDogTraining(): void {
     this.router.navigate(['dog-training']);
   }
+
+  public addDogToTraining(): void {
+    this.router.navigate(['add-dog-to-training']);
+  }
+
+  public editTraining(): void {
+    this.router.navigate(['edit-training']);
+  }
 }
