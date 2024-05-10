@@ -9,13 +9,15 @@ import { TrainingMapComponent } from './components/dog-training/training-map/tra
 import { TrainingsListComponent } from './components/trainings-list/trainings-list.component';
 import { DogTrainingComponent } from './components/dog-training/dog-training.component';
 import { DogTrainingDataComponent } from './components/dog-training/dog-training-data/dog-training-data.component';
+import { TrainingDetailsComponent } from './components/training-details/training-details.component';
 
 @NgModule({
   declarations: [
     TrainingMapComponent,
     TrainingsListComponent,
     DogTrainingComponent,
-    DogTrainingDataComponent
+    DogTrainingDataComponent,
+    TrainingDetailsComponent,
   ],
   imports: [
     CommonModule,

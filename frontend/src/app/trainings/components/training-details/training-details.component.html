@@ -1,0 +1,26 @@
+<section class="flex gap-3">
+  <h1>Training details</h1>
+  <button type="button">Edit training</button>
+  <button type="button">Add dog to training</button>
+</section>
+<section>
+  <div class="flex gap-3">
+    <span>Date</span>
+    <span>{{trainingData.date | date: 'dd/MM/yyyy HH:mm'}}</span>
+  </div>
+  <div class="flex gap-3">
+    <span>Location</span>
+    <span>{{trainingData.location}}</span>
+  </div>
+  <div class="flex gap-3">
+    <span>Address</span>
+    <span>{{trainingData.address}}</span>
+  </div>
+</section>
+<section class="flex flex-column gap-2">
+  <div class="flex gap-5" *ngFor="let dog of dogsList">
+    <span>{{dog.name}}</span>
+    <span>{{dog.note}}</span>
+    <button type="button" (click)="goToDogTraining()">Go to dog training</button>
+  </div>
+</section>

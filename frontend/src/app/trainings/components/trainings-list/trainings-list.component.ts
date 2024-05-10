@@ -30,7 +30,7 @@ export class TrainingsListComponent implements OnInit, OnDestroy {
   }
 
   public goToTraining(): void {
-    this.router.navigate(['dog-training']);
+    this.router.navigate(['training-details']);
   }
 
   public addDogToTraining(): void {
