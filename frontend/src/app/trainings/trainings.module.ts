@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TrainingsListComponent } from './trainings-list/trainings-list.component';
-import { TrainingMapComponent } from './dog-training/training-map/training-map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-import { DogTrainingComponent } from './dog-training/dog-training.component';
-import { DogTrainingDataComponent } from './dog-training/dog-training-data/dog-training-data.component';
+import { TableModule } from 'primeng/table';
+
 import { SharedModule } from '../shared/shared.module';
 import { TrainingsRoutingModule } from './trainings-routing.module';
-import { TableModule } from 'primeng/table';
+import { TrainingMapComponent } from './components/dog-training/training-map/training-map.component';
+import { TrainingsListComponent } from './components/trainings-list/trainings-list.component';
+import { DogTrainingComponent } from './components/dog-training/dog-training.component';
+import { DogTrainingDataComponent } from './components/dog-training/dog-training-data/dog-training-data.component';
 
 @NgModule({
   declarations: [

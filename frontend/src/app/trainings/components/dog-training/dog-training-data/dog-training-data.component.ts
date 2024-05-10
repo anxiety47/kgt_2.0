@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { DogTraining } from '../../models/trainings';
+import { DogTraining } from 'src/app/trainings/models/trainings';
 
 @Component({
   selector: 'app-training-data',

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DogTrainingDataComponent } from './dog-training-data.component';
-import { TrainingsModule } from '../../trainings.module';
+import { TrainingsModule } from 'src/app/trainings/trainings.module';
 
 describe('DogTrainingDataComponent', () => {
   let component: DogTrainingDataComponent;
