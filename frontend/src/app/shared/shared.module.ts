@@ -5,6 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputTextModule } from 'primeng/inputtext';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -13,6 +16,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 @NgModule({
   declarations: [],
   imports: [
+    DropdownModule,
+    InputTextareaModule,
+    InputTextModule,
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -24,7 +30,15 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       }
     })
   ],
-  exports: [TranslateModule, ReactiveFormsModule]
+  exports: [
+    TranslateModule, 
+    ReactiveFormsModule,
+    CommonModule,
+    DropdownModule,
+    InputTextareaModule,
+    InputTextModule,
+    HttpClientModule,
+  ]
 })
 
 export class SharedModule {}
