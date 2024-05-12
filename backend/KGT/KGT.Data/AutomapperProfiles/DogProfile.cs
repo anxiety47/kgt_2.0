@@ -3,6 +3,7 @@ using KGT.Data.DataTransferObjects;
 using KGT.Data.DataTransferObjects.Dogs;
 using KGT.Data.Models;
 using KGT.Data.Models.Dogs;
+using KGT.Data.Models.DogTrainings;
 
 namespace KGT.Data.AutomapperProfiles
 {
@@ -51,7 +52,7 @@ namespace KGT.Data.AutomapperProfiles
 					dest => dest.Id,
 					opt => opt.MapFrom(src => src.DogId)
 				);
-			CreateMap<Models.Dogs.DogTrainingBasicInfo, DataTransferObjects.Dogs.DogTrainingBasicInfo>()
+			CreateMap<DogTrainingBasicInfo, DataTransferObjects.DogTrainings.DogTrainingBasicInfo>()
 				.ReverseMap();
             CreateMap<Models.Dogs.DogEventBasicInfo, DataTransferObjects.Dogs.DogEventBasicInfo>()
                 .ReverseMap();

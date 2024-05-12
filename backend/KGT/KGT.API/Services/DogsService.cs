@@ -11,10 +11,10 @@ namespace KGT.API.Services
         private readonly IMapper _mapper;
 
 
-        public DogsService(IMapper mapper, IDogsRepository dogsRepository) 
+        public DogsService(IDogsRepository dogsRepository, IMapper mapper) 
         {
-            _mapper = mapper;
             _dogsRepository = dogsRepository;
+            _mapper = mapper;
         }
 
         public async Task<List<DogBasicInfo>> GetAllDogsBasicInfo()

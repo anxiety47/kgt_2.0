@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KGT.Data.Models.DogTrainings;
 
 namespace KGT.Data.Models.Dogs
 {
