@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KGT.Data.DataTransferObjects.DogTrainings;
 
 namespace KGT.Data.DataTransferObjects.Dogs
 {

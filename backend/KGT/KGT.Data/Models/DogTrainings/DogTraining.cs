@@ -4,8 +4,9 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using KGT.Data.Models.Dogs;
+using KGT.Data.Models.Trainings;
 
-namespace KGT.Data.Models
+namespace KGT.Data.Models.DogTrainings
 {
     [Table("DogTrainings")]
     public class DogTraining
