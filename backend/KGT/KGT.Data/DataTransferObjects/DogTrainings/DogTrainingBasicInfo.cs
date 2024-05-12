@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KGT.Data.Models.Dogs
+namespace KGT.Data.DataTransferObjects.DogTrainings
 {
     public class DogTrainingBasicInfo
     {
@@ -10,6 +10,5 @@ namespace KGT.Data.Models.Dogs
         public string GeneralLocation { get; set; }
         public string LocationDetails { get; set; }
         public string LostPerson { get; set; }
-
     }
 }
